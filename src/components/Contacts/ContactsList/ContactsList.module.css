@@ -1,0 +1,12 @@
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    /* flex-direction: column; */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    list-style: none;
+
+}
+
