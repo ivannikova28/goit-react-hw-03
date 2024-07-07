@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 
 import contacts_init from '../../_data/contacts.json'
 
-import { ContactsForm, ContactsList } from "../Contacts";
+import {ContactsForm} from '../ContactsForm/ContactForm'
 import { SearchBox } from '../SearchBox/SearchBox';
+import { ContactsList } from '../ContactsList/ContactList';
+
 
 const LOCALSTORAGE_KEY_CONTACTS = "contacts"
 
@@ -48,7 +50,6 @@ const App = () => {
     <>
       <div>
         <h1>Phonebook</h1>
-
         <ContactsForm handlerAddContact={handlerAddContact} />
         <SearchBox value={searchContacts} handlerSearchContacts={handlerSearchContacts} />
         {visibleContacts.length ? (
