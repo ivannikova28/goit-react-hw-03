@@ -1,18 +1,19 @@
-import { ContactsListItem } from './ContactsListItem/ContactsListItem';
+import { Contact } from "../Contact/Contact";
 
 import styles from './ContactsList.module.css';
 
-export const ContactsList = ({ contacts, handlerDeleteContact }) => {
+export const ContactList = ({ contacts, handlerDeleteContact }) => {
   return (
     <ul className={styles.list}>
       {contacts.map((contact) => {
-        return <li key={contact.id}>
-            <ContactsListItem
-            
+        return (
+          <li key={contact.id}>
+            <Contact
               contact={contact}
               handlerDeleteContact={handlerDeleteContact}
             />
           </li>
+        );
         })
       }
     </ul>

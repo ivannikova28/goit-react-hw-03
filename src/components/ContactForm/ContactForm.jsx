@@ -3,9 +3,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
 
-import styles from "./ContactsForm.module.css";
+import styles from "./ContactForm.module.css";
 
-export const ContactsForm = ({ handlerAddContact }) => {
+export const ContactForm = ({ handlerAddContact }) => {
   const nameFieldId = useId();
   const numberFieldId = useId();
 
@@ -66,8 +66,10 @@ export const ContactsForm = ({ handlerAddContact }) => {
           <ErrorMessage className={styles.err} name="number" component="span" />
         </div>
 
-        <button type="submit" className={styles.btn}>Add contact</button>
+        <button type="submit" className={styles.btn}>
+          Add contact
+        </button>
       </Form>
     </Formik>
   );
-}
+};

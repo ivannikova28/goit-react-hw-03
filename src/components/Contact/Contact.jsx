@@ -1,9 +1,9 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoPerson } from "react-icons/io5";
 
-import styles from './ContactsListItem.module.css'
+import styles from "./Contact.module.css";
 
-export const ContactsListItem = ({ contact, handlerDeleteContact }) => {
+export const Contact = ({ contact, handlerDeleteContact }) => {
   const { id, name, number } = contact;
 
   const onDelete = () => {
